@@ -1,15 +1,15 @@
 # CommandblockFinder
 
-1. [Deutsch](#Deutsch)
-   - [Anwendung](#Deutsch/Anwendung)
-   - [Output-Format](#Deutsch/Output-Format)
-   - [Wichtig](#Deutsch/Wichtig)
-2. [English](#English)
-   - [Usage](#English/Usage)
-   - [Output format](#English/Output%20format)
-   - [Important](#English/Important)
-3. [Konsole öffnen / Open console](#Konsole%20öffnen%20/%20Open%20console)
-4. [Download](#Download)
+1. [Deutsch](#deutsch)
+   - [Anwendung](#anwendung)
+   - [Output-Format](#output-format)
+   - [Wichtig](#wichtig)
+2. [English](#english)
+   - [Usage](#usage)
+   - [Output format](#output-format-1)
+   - [Important](#important)
+3. [Konsole öffnen / Open console](#konsole-öffnen--open-console)
+4. [Download](#download)
 
 ## Deutsch
 CommandblockFinder ist ein Programm, mit dem man Commandblöcke und deren Commands von einer Minecraft-Welt finden kann. Dies ist nützlich, wenn bspw. jemand einen Commandblock mit dem Command `kill @a` irgendwo hingestellt hat und man findet ihn nicht. Außerdem kann das Programm auch den Command von Commandblöcken entfernen.
