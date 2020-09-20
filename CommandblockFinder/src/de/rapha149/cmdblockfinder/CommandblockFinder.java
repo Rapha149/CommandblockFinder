@@ -248,11 +248,11 @@ public class CommandblockFinder {
 	}
 
 	private static String getRegionFolder(String worldName) {
-		if (worldName.equals(Lang.OVERWORLD))
+		if (worldName.equalsIgnoreCase(Lang.OVERWORLD))
 			return "region";
-		else if (worldName.equals(Lang.NETHER))
+		else if (worldName.equalsIgnoreCase(Lang.NETHER))
 			return "Dim-1/region";
-		else if (worldName.equals(Lang.END))
+		else if (worldName.equalsIgnoreCase(Lang.END))
 			return "Dim1/region";
 		else
 			return null;
