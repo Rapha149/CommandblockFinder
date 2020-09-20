@@ -4,10 +4,12 @@
    - [Anwendung](#anwendung)
    - [Output-Format](#output-format)
    - [Wichtig](#wichtig)
+   - [Systemvoraussetzungen](#systemvorraussetzungen)
 2. [English](#english)
    - [Usage](#usage)
    - [Output format](#output-format-1)
    - [Important](#important)
+   - [System requirements](#system-requirements)
 3. [Konsole öffnen / Open console](#konsole-öffnen--open-console)
 4. [Download](#download)
 
@@ -20,6 +22,8 @@ Beim Finden von Commmandblöcken werden diese in einer Datei gespeichert.
 Das Format ist: `Welt / X Y Z: Command`. Verschiedene Commandblöcke werden durch eine Zeile Freiraum getrennt.
 ### Wichtig
 Dieses Programm nicht benutzen, während die Welt in Minecraft geöffnet ist. Beim Speichern durch Minecraft werden Änderungen von diesem Programm nicht übernommen.
+### Systemvorraussetzungen
+Java 8 oder höher. [Java-Download](https://java.com/de/)
 
 ## English
 CommandblockFinder is a program to find command blocks and their commands from a Minecraft world. This is useful if for example someone has put a command block with the command `kill @a` somewhere and you can't find it. The program can also remove the command from command blocks.
@@ -30,6 +34,8 @@ When Commmand Blocks are found, they are stored in a file.
 The format is: `World / X Y Z: Command`. Different command blocks are separated by a line of free space.
 ### Important
 Do not use this program while the world is open in Minecraft. When saving the world in Minecraft, changes applied by this program will not be saved.
+### System requirements
+Java 8 or higher. [Java download](https://java.com/en/)
 
 ## Konsole öffnen / Open console
 ![cmd tutorial](https://github.com/Rapha149/CommandblockFinder/blob/master/cmd.gif)
