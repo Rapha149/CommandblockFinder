@@ -191,49 +191,54 @@ public class CommandblockFinder {
 		fileCount = files.length * 32 * 32;
 		int count = 0;
 		for (int i = 0; i < files.length; i++) {
-			MCAFile file = MCAUtil.read(files[i]);
-			for (int j = 0; j < 32 * 32; j++) {
-				count++;
-				calcPercent(count);
-				Chunk chunk = file.getChunk(j);
+			try {
+				MCAFile file = MCAUtil.read(files[i]);
+				for (int j = 0; j < 32 * 32; j++) {
+					count++;
+					calcPercent(count);
+					Chunk chunk = file.getChunk(j);
 
-				if (chunk != null) {
-					for (CompoundTag tileEntity : chunk.getTileEntities()) {
-						if (tileEntity.getInt("x") == x && tileEntity.getInt("y") == y && tileEntity.getInt("z") == z) {
-							calcPercent(fileCount);
-							if (ids.contains(tileEntity.getString("id"))) {
-								String command = tileEntity.getString("Command").trim();
+					if (chunk != null) {
+						for (CompoundTag tileEntity : chunk.getTileEntities()) {
+							if (tileEntity.getInt("x") == x && tileEntity.getInt("y") == y
+									&& tileEntity.getInt("z") == z) {
+								calcPercent(fileCount);
+								if (ids.contains(tileEntity.getString("id"))) {
+									String command = tileEntity.getString("Command").trim();
 
-								if (!command.isEmpty()) {
-									System.out.printf(Lang.REMOVE_COMMANDBLOCK, world, x, y, z, command).println();
-									while (true) {
-										String line = br.readLine();
-										if (line.equalsIgnoreCase(Lang.YES)) {
-											tileEntity.putString("Command", "");
-											MCAUtil.write(file, files[i], true);
-											System.out.println(Lang.COMMANDBLOCK_REMOVED);
-											return;
+									if (!command.isEmpty()) {
+										System.out.printf(Lang.REMOVE_COMMANDBLOCK, world, x, y, z, command).println();
+										while (true) {
+											String line = br.readLine();
+											if (line.equalsIgnoreCase(Lang.YES)) {
+												tileEntity.putString("Command", "");
+												MCAUtil.write(file, files[i], true);
+												System.out.println(Lang.COMMANDBLOCK_REMOVED);
+												return;
+											}
+
+											else if (line.equalsIgnoreCase(Lang.NO)) {
+												System.out.println(Lang.CANCELLED);
+												return;
+											}
+
+											else
+												System.out.println(Lang.STATE_YES_OR_NO);
 										}
-
-										else if (line.equalsIgnoreCase(Lang.NO)) {
-											System.out.println(Lang.CANCELLED);
-											return;
-										}
-
-										else
-											System.out.println(Lang.STATE_YES_OR_NO);
+									} else {
+										System.out.println(Lang.COMMAND_ALREADY_EMPTY);
+										return;
 									}
 								} else {
-									System.out.println(Lang.COMMAND_ALREADY_EMPTY);
+									System.out.println(Lang.NOT_A_COMMANDBLOCK);
 									return;
 								}
-							} else {
-								System.out.println(Lang.NOT_A_COMMANDBLOCK);
-								return;
 							}
 						}
 					}
 				}
+			} catch (ClassCastException e) {
+				continue;
 			}
 		}
 
