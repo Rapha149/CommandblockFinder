@@ -1,7 +1,7 @@
 # CommandblockFinder
 
 ## Deutsch
-CommandblockFinder ist ein Programm, mit dem man Commandblöcke und deren Commands von einer Minecraft-Welt finden kann. Dies ist nützlich, wenn bspw. irgendjemand einen Commandblock mit dem Command `kill @a` irgendwo hingestellt hat und man findet ihn nicht. Außerdem kann das Programm auch den Command von Commandblöcken entfernen.
+CommandblockFinder ist ein Programm, mit dem man Commandblöcke und deren Commands von einer Minecraft-Welt finden kann. Dies ist nützlich, wenn bspw. jemand einen Commandblock mit dem Command `kill @a` irgendwo hingestellt hat und man findet ihn nicht. Außerdem kann das Programm auch den Command von Commandblöcken entfernen.
 ### Anwendung
 Einfach die Jar-Datei in den Welt-Ordner downloaden. Dann im Welt-Ordner ein Terminal öffnen; unter Windows geht das ganz einfach, indem man auf den Pfad klickt und `cmd` reinschreibt. In die jetzt geöffnete Konsole schreibt man den Befehl `java -jar CommandblockFinder.jar`. Man kann die Sprache des Programms mit einem Argument auswählen, zum Beispiel: `java -jar CommandblockFinder.jar de`. Verfügbare Sprachen sind Deutsch (de, ger, german) und Englisch (en, english). Ab der Eingabe des Befehls leitet das Programm einen durch den weiteren Ablauf.
 
