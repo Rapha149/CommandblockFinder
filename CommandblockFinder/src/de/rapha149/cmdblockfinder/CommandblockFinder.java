@@ -37,7 +37,7 @@ public class CommandblockFinder {
 	private static String lastLine;
 
 	public static void main(String[] args) {
-		Language language = Language.GERMAN;
+		Language language = Language.ENGLISH;
 		if (args.length > 0) {
 			language = Language.of(args[0]);
 			if (language == null) {
