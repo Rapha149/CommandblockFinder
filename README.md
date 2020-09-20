@@ -12,3 +12,6 @@ Just download the jar file into the world folder. Then open a terminal in the wo
  
 ## Konsole öffnen / Open console
 ![cmd tutorial](https://github.com/Rapha149/CommandblockFinder/blob/master/cmd.gif)
+
+## Download
+[CommandblockFinder.jar](https://www.dropbox.com/s/9zbnug96olcg7t9/CommandblockFinder.jar?dl=0)
