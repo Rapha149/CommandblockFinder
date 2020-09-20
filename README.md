@@ -8,7 +8,7 @@ Einfach die Jar-Datei in den Welt-Ordner downloaden. Dann im Welt-Ordner ein Ter
 ## English
 CommandblockFinder is a program to find command blocks and their commands from a Minecraft world. This is useful if for example someone has put a command block with the command `kill @a` somewhere and you can't find it. The program can also remove the command from command blocks.
 ### Usage
-Just download the jar file into the world folder. Then open a terminal in the world folder; in Windows this is very easy by clicking on the path and typing `cmd` into it. Write the command `java -jar CommandblockFinder.jar` into the console. You can select the language of the program with an argument, for example: `java -jar CommandblockFinder.jar en`. Available languages are German (de, ger, german) and English (en, english). After entering the command, the program guides you through the rest of the process.
+Just download the jar file into the world folder. Then open a terminal in the world folder; in Windows this can be done very easy by clicking on the path and typing `cmd` into it. After that write the command `java -jar CommandblockFinder.jar` into the console. You can select the language of the program with an argument, for example: `java -jar CommandblockFinder.jar en`. Available languages are German (de, ger, german) and English (en, english). After entering the command, the program guides you through the rest of the process.
  
 ## Konsole öffnen / Open console
 ![cmd tutorial](https://github.com/Rapha149/CommandblockFinder/blob/master/cmd.gif)
