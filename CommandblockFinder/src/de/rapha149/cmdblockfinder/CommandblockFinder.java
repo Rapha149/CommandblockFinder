@@ -139,21 +139,25 @@ public class CommandblockFinder {
 		for (Entry<String, File[]> entry : worlds.entrySet()) {
 			File[] files = entry.getValue();
 			for (int i = 0; i < files.length; i++) {
-				MCAFile file = MCAUtil.read(files[i], LoadFlags.TILE_ENTITIES);
-				for (int j = 0; j < 32 * 32; j++) {
-					count++;
-					calcPercent(count);
+				try {
+					MCAFile file = MCAUtil.read(files[i], LoadFlags.TILE_ENTITIES);
+					for (int j = 0; j < 32 * 32; j++) {
+						count++;
+						calcPercent(count);
 
-					Chunk chunk = file.getChunk(j);
-					if (chunk != null && chunk.getTileEntities() != null) {
-						chunk.getTileEntities().forEach(tileEntity -> {
-							if (ids.contains(tileEntity.getString("id"))) {
-								commandblocks.add(
-										new Commandblock(entry.getKey(), tileEntity.getInt("x"), tileEntity.getInt("y"),
-												tileEntity.getInt("z"), tileEntity.getString("Command")));
-							}
-						});
+						Chunk chunk = file.getChunk(j);
+						if (chunk != null && chunk.getTileEntities() != null) {
+							chunk.getTileEntities().forEach(tileEntity -> {
+								if (ids.contains(tileEntity.getString("id"))) {
+									commandblocks.add(new Commandblock(entry.getKey(), tileEntity.getInt("x"),
+											tileEntity.getInt("y"), tileEntity.getInt("z"),
+											tileEntity.getString("Command")));
+								}
+							});
+						}
 					}
+				} catch (ClassCastException e) {
+					continue;
 				}
 			}
 		}
