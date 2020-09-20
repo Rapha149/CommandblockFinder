@@ -25,7 +25,7 @@ CommandblockFinder is a program to find command blocks and their commands from a
 ### Usage
 Just download the jar file into the world folder. Then open a terminal in the world folder; in Windows this can be done very easy by clicking on the path and typing `cmd` into it. After that write the command `java -jar CommandblockFinder.jar` into the console. You can select the language of the program with an argument, for example: `java -jar CommandblockFinder.jar en`. Available languages are German (de, ger, german) and English (en, english). After entering the command, the program guides you through the rest of the process.
 ### Output format
-When Commmand Blocks are found, they are stored in a file. The format is: 'World / X Y Z: Command'. Different command blocks are separated by a line of free space.
+When Commmand Blocks are found, they are stored in a file. The format is: `World / X Y Z: Command`. Different command blocks are separated by a line of free space.
 ### Important
 Do not use this program while the world is open in Minecraft. When saving the world in Minecraft, changes applied by this program will not be saved.
 
