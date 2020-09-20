@@ -143,9 +143,9 @@ public class CommandblockFinder {
 				for (int j = 0; j < 32 * 32; j++) {
 					count++;
 					calcPercent(count);
-					Chunk chunk = file.getChunk(j);
 
-					if (chunk != null) {
+					Chunk chunk = file.getChunk(j);
+					if (chunk != null && chunk.getTileEntities() != null) {
 						chunk.getTileEntities().forEach(tileEntity -> {
 							if (ids.contains(tileEntity.getString("id"))) {
 								commandblocks.add(
@@ -161,6 +161,18 @@ public class CommandblockFinder {
 		calcPercent(fileCount);
 
 		if (!commandblocks.isEmpty()) {
+			commandblocks.sort((c1, c2) -> {
+				int dx = c1.x - c2.x;
+				int dy = c1.y - c2.y;
+				int dz = c1.z - c2.z;
+
+				if (dx != 0)
+					return dx;
+				if (dz != 0)
+					return dz;
+				return dy;
+			});
+
 			File file = new File(
 					new SimpleDateFormat("'CommandblockFinder_'yyyy-MM-dd_HH.mm.ss'.txt'").format(new Date()));
 			FileWriter writer = new FileWriter(file);
@@ -258,19 +270,6 @@ public class CommandblockFinder {
 			return null;
 	}
 
-//	private static String getWorldName(String regionFolder) {
-//		switch (regionFolder) {
-//		case "region":
-//			return Lang.OVERWORLD;
-//		case "Dim-1/region":
-//			return Lang.NETHER;
-//		case "Dim1/region":
-//			return Lang.END;
-//		default:
-//			return null;
-//		}
-//	}
-
 	private static class Commandblock {
 
 		String world;
@@ -284,7 +283,7 @@ public class CommandblockFinder {
 			this.x = x;
 			this.y = y;
 			this.z = z;
-			this.command = command;
+			this.command = command.substring(command.startsWith("/") ? 1 : 0);
 		}
 
 		@Override
