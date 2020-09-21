@@ -5,11 +5,13 @@
    - [Output-Format](#output-format)
    - [Wichtig](#wichtig)
    - [Systemvoraussetzungen](#systemvorraussetzungen)
+   - [Referenzen](#referenzen)
 2. [English](#english)
    - [Usage](#usage)
    - [Output format](#output-format-1)
    - [Important](#important)
    - [System requirements](#system-requirements)
+   - [References](#references)
 3. [Konsole öffnen / Open console](#konsole-öffnen--open-console)
 4. [Download](#download)
 
