@@ -20,6 +20,7 @@ import net.querz.mca.Chunk;
 import net.querz.mca.LoadFlags;
 import net.querz.mca.MCAFile;
 import net.querz.mca.MCAUtil;
+import net.querz.nbt.io.NBTUtil;
 import net.querz.nbt.tag.CompoundTag;
 
 public class CommandblockFinder {
@@ -53,7 +54,8 @@ public class CommandblockFinder {
 		}
 		Lang.initialize(language);
 
-		if (new File("level.dat").exists()) {
+		File level = new File("level.dat");
+		if (level.exists()) {
 			File current;
 			if ((current = new File("region")).exists() && current.isDirectory()
 					&& current.listFiles(fileFilter).length > 0)
@@ -69,6 +71,10 @@ public class CommandblockFinder {
 				System.out.println(Lang.NO_REGION_FILES);
 			else {
 				try {
+					String levelName = ((CompoundTag) NBTUtil.read(level).getTag()).getCompoundTag("Data")
+							.getString("LevelName");
+					System.out.printf(Lang.SHOW_WORLD_NAME, levelName).println();
+
 					System.out.println(Lang.FIND_OR_REMOVE);
 					BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 					while (true) {

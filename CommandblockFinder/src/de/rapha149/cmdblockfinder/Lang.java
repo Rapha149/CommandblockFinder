@@ -20,13 +20,14 @@ public class Lang {
 
 	public static String NOT_A_WORLD_FOLDER;
 	public static String NO_REGION_FILES;
+	public static String SHOW_WORLD_NAME;
+	public static String SOME_FILES_COULD_NOT_BE_READ;
 
 	public static String FIND_OR_REMOVE;
 	public static String STATE_ONE_OR_TWO;
 
 	public static String NO_COMMANDBLOCKS_FOUND;
 	public static String COMMANDBLOCKS_FOUND;
-	public static String SOME_FILES_COULD_NOT_BE_READ;
 
 	public static String DEFINE_WORLD;
 	public static String WORLD_NOT_FOUND;
@@ -51,13 +52,14 @@ public class Lang {
 
 			NOT_A_WORLD_FOLDER = "Das ist kein Welt-Ordner.";
 			NO_REGION_FILES = "Keine Regionen-Dateien gefunden.";
+			SHOW_WORLD_NAME = "Welt initialisiert: %s";
+			SOME_FILES_COULD_NOT_BE_READ = "Manche Dateien konnten nicht ausgelesen werden.";
 
 			FIND_OR_REMOVE = "Willst du Commandblöcke\n(1) suchen oder\n(2) entfernen?";
 			STATE_ONE_OR_TWO = "Bitte die Zahl 1 oder 2 angeben.";
 
 			NO_COMMANDBLOCKS_FOUND = "Keine Commandblöcke gefunden.";
 			COMMANDBLOCKS_FOUND = "%s Commandblöcke wurden gefunden. Output-Datei: \"%s\"";
-			SOME_FILES_COULD_NOT_BE_READ = "Manche Dateien konnten nicht ausgelesen werden.";
 			
 			DEFINE_WORLD = "Bitte die Welt angeben. (" + OVERWORLD + "/" + NETHER + "/" + END + ")";
 			WORLD_NOT_FOUND = "Welt nicht gefunden.";
@@ -81,13 +83,14 @@ public class Lang {
 
 			NOT_A_WORLD_FOLDER = "This is not a world folder.";
 			NO_REGION_FILES = "No region files found.";
+			SHOW_WORLD_NAME = "World initialized: %s";
+			SOME_FILES_COULD_NOT_BE_READ = "Some files could not be read.";
 
 			FIND_OR_REMOVE = "Do you want to\n(1) find or\n(2) remove\nCommandblocks?";
 			STATE_ONE_OR_TWO = "Please state the number 1 or 2.";
 
 			NO_COMMANDBLOCKS_FOUND = "No commandblocks found.";
 			COMMANDBLOCKS_FOUND = "%s commandblocks found. Output file: \"%s\"";
-			SOME_FILES_COULD_NOT_BE_READ = "Some files could not be read.";
 			
 			DEFINE_WORLD = "Please define the world. (" + OVERWORLD + "/" + NETHER + "/" + END + ")";
 			WORLD_NOT_FOUND = "World not found.";
