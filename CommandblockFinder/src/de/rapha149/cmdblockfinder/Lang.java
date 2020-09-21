@@ -52,7 +52,7 @@ public class Lang {
 
 			NOT_A_WORLD_FOLDER = "Das ist kein Welt-Ordner.";
 			NO_REGION_FILES = "Keine Regionen-Dateien gefunden.";
-			SHOW_WORLD_NAME = "Welt initialisiert: %s";
+			SHOW_WORLD_NAME = "Welt gefunden: %s";
 			SOME_FILES_COULD_NOT_BE_READ = "Manche Dateien konnten nicht ausgelesen werden.";
 
 			FIND_OR_REMOVE = "Willst du Commandblöcke\n(1) suchen oder\n(2) entfernen?";
@@ -83,7 +83,7 @@ public class Lang {
 
 			NOT_A_WORLD_FOLDER = "This is not a world folder.";
 			NO_REGION_FILES = "No region files found.";
-			SHOW_WORLD_NAME = "World initialized: %s";
+			SHOW_WORLD_NAME = "World found: %s";
 			SOME_FILES_COULD_NOT_BE_READ = "Some files could not be read.";
 
 			FIND_OR_REMOVE = "Do you want to\n(1) find or\n(2) remove\nCommandblocks?";
