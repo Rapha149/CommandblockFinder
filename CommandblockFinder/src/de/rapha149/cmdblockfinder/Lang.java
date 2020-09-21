@@ -26,6 +26,7 @@ public class Lang {
 
 	public static String NO_COMMANDBLOCKS_FOUND;
 	public static String COMMANDBLOCKS_FOUND;
+	public static String SOME_FILES_COULD_NOT_BE_READ;
 
 	public static String DEFINE_WORLD;
 	public static String WORLD_NOT_FOUND;
@@ -56,7 +57,8 @@ public class Lang {
 
 			NO_COMMANDBLOCKS_FOUND = "Keine Commandblöcke gefunden.";
 			COMMANDBLOCKS_FOUND = "%s Commandblöcke wurden gefunden. Output-Datei: \"%s\"";
-
+			SOME_FILES_COULD_NOT_BE_READ = "Manche Dateien konnten nicht ausgelesen werden.";
+			
 			DEFINE_WORLD = "Bitte die Welt angeben. (" + OVERWORLD + "/" + NETHER + "/" + END + ")";
 			WORLD_NOT_FOUND = "Welt nicht gefunden.";
 			DEFINE_COORDS = "Bitte gebe die Koordinaten des Commandblocks an. (Format: \"X Y Z\", Bsp: \"13 75 8\")";
@@ -85,7 +87,8 @@ public class Lang {
 
 			NO_COMMANDBLOCKS_FOUND = "No commandblocks found.";
 			COMMANDBLOCKS_FOUND = "%s commandblocks found. Output file: \"%s\"";
-
+			SOME_FILES_COULD_NOT_BE_READ = "Some files could not be read.";
+			
 			DEFINE_WORLD = "Please define the world. (" + OVERWORLD + "/" + NETHER + "/" + END + ")";
 			WORLD_NOT_FOUND = "World not found.";
 			DEFINE_COORDS = "Please define the coordinates of the commandblock. (Format: \"X Y Z\", e.g: \"13 75 8\")";
