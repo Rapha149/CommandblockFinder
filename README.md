@@ -24,6 +24,8 @@ Das Format ist: `Welt / X Y Z: Command`. Verschiedene Commandblöcke werden durc
 Dieses Programm nicht benutzen, während die Welt in Minecraft geöffnet ist. Beim Speichern durch Minecraft werden Änderungen von diesem Programm nicht übernommen.
 ### Systemvorraussetzungen
 Java 8 oder höher. [Java-Download](https://java.com/de/)
+### Referenzen
+- Als API habe ich die [NBT-API](https://github.com/Querz/NBT) von [Querz](https://github.com/Querz/) benutzt.
 
 ## English
 CommandblockFinder is a program to find command blocks and their commands from a Minecraft world. This is useful if for example someone has put a command block with the command `kill @a` somewhere and you can't find it. The program can also remove the command from command blocks.
@@ -36,6 +38,8 @@ The format is: `World / X Y Z: Command`. Different command blocks are separated 
 Do not use this program while the world is open in Minecraft. When saving the world in Minecraft, changes applied by this program will not be saved.
 ### System requirements
 Java 8 or higher. [Java download](https://java.com/en/)
+### References
+- As an API I used the [NBT-API](https://github.com/Querz/NBT) by [Querz](https://github.com/Querz/).
 
 ## Konsole öffnen / Open console
 ![cmd tutorial](https://github.com/Rapha149/CommandblockFinder/blob/master/cmd.gif)
