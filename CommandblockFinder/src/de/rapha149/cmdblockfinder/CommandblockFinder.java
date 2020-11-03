@@ -128,7 +128,7 @@ public class CommandblockFinder {
 	}
 
 	private static void find() throws IOException {
-		boolean exception = false;
+		int exceptions = 0;
 		List<Commandblock> commandblocks = new ArrayList<>();
 		Map<String, File[]> worlds = new HashMap<>();
 		if (overworld)
@@ -163,8 +163,8 @@ public class CommandblockFinder {
 							});
 						}
 					}
-				} catch (ClassCastException e) {
-					exception = true;
+				} catch (ClassCastException | IOException e) {
+					exceptions++;
 					continue;
 				}
 			}
@@ -197,12 +197,16 @@ public class CommandblockFinder {
 		} else
 			System.out.println(Lang.NO_COMMANDBLOCKS_FOUND);
 
-		if (exception)
-			System.out.println(Lang.SOME_FILES_COULD_NOT_BE_READ);
+		if (exceptions > 0) {
+			if (exceptions == 1)
+				System.out.println(Lang.ONE_FILE_COULD_NOT_BE_READ);
+			else
+				System.out.println(String.format(Lang.SOME_FILES_COULD_NOT_BE_READ, exceptions));
+		}
 	}
 
 	private static void remove(BufferedReader br, String world, int x, int y, int z) throws IOException {
-		boolean exception = false;
+		int exceptions = 0;
 		File[] files = new File(getRegionFolder(world)).listFiles(file -> file.getName().endsWith(".mca"));
 		fileCount = files.length * 32 * 32;
 		int count = 0;
@@ -253,15 +257,19 @@ public class CommandblockFinder {
 						}
 					}
 				}
-			} catch (ClassCastException e) {
-				exception = true;
+			} catch (ClassCastException | IOException e) {
+				exceptions++;
 				continue;
 			}
 		}
 
 		System.out.println(Lang.NOT_A_COMMANDBLOCK);
-		if (exception)
-			System.out.println(Lang.SOME_FILES_COULD_NOT_BE_READ);
+		if (exceptions > 0) {
+			if (exceptions == 1)
+				System.out.println(Lang.ONE_FILE_COULD_NOT_BE_READ);
+			else
+				System.out.println(String.format(Lang.SOME_FILES_COULD_NOT_BE_READ, exceptions));
+		}
 	}
 
 	private static void calcPercent(int completed) {
