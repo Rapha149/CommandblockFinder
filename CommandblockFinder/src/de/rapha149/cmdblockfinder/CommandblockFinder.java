@@ -16,10 +16,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import de.rapha149.cmdblockfinder.Lang.Language;
-import net.querz.mca.Chunk;
+import de.rapha149.querz.Chunk;
+import de.rapha149.querz.MCAFile;
+import de.rapha149.querz.MCAUtil;
 import net.querz.mca.LoadFlags;
-import net.querz.mca.MCAFile;
-import net.querz.mca.MCAUtil;
 import net.querz.nbt.io.NBTUtil;
 import net.querz.nbt.tag.CompoundTag;
 
@@ -198,10 +198,9 @@ public class CommandblockFinder {
 			System.out.println(Lang.NO_COMMANDBLOCKS_FOUND);
 
 		if (exceptions > 0) {
-			if (exceptions == 1)
-				System.out.println(Lang.ONE_FILE_COULD_NOT_BE_READ);
-			else
-				System.out.println(String.format(Lang.SOME_FILES_COULD_NOT_BE_READ, exceptions));
+			System.out.printf(String.format(
+					exceptions == 1 ? Lang.ONE_FILE_COULD_NOT_BE_READ : Lang.SOME_FILES_COULD_NOT_BE_READ, exceptions))
+					.println();
 		}
 	}
 
@@ -265,10 +264,9 @@ public class CommandblockFinder {
 
 		System.out.println(Lang.NOT_A_COMMANDBLOCK);
 		if (exceptions > 0) {
-			if (exceptions == 1)
-				System.out.println(Lang.ONE_FILE_COULD_NOT_BE_READ);
-			else
-				System.out.println(String.format(Lang.SOME_FILES_COULD_NOT_BE_READ, exceptions));
+			System.out.printf(String.format(
+					exceptions == 1 ? Lang.ONE_FILE_COULD_NOT_BE_READ : Lang.SOME_FILES_COULD_NOT_BE_READ, exceptions))
+					.println();
 		}
 	}
 
