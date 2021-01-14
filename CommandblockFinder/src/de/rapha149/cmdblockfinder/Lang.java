@@ -57,11 +57,11 @@ public class Lang {
 			ONE_FILE_COULD_NOT_BE_READ = "%s Datei konnten nicht ausgelesen werden.";
 			SOME_FILES_COULD_NOT_BE_READ = "%s Dateien konnten nicht ausgelesen werden.";
 
-			FIND_OR_REMOVE = "Willst du Commandblöcke\n(1) suchen oder\n(2) entfernen?";
+			FIND_OR_REMOVE = "Willst du CommandblÃ¶cke\n(1) suchen oder\n(2) entfernen?";
 			STATE_ONE_OR_TWO = "Bitte die Zahl 1 oder 2 angeben.";
 
-			NO_COMMANDBLOCKS_FOUND = "Keine Commandblöcke gefunden.";
-			COMMANDBLOCKS_FOUND = "%s Commandblöcke wurden gefunden. Output-Datei: \"%s\"";
+			NO_COMMANDBLOCKS_FOUND = "Keine CommandblÃ¶cke gefunden.";
+			COMMANDBLOCKS_FOUND = "%s CommandblÃ¶cke wurden gefunden. Output-Datei: \"%s\"";
 			
 			DEFINE_WORLD = "Bitte die Welt angeben. (" + OVERWORLD + "/" + NETHER + "/" + END + ")";
 			WORLD_NOT_FOUND = "Welt nicht gefunden.";
